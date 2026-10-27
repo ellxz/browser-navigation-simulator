@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lavender Browser | Navigation Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-header">
+      <a class="brand" href="#" aria-label="Lavender Browser home">
+        <div class="brand-icon">✿</div>
+        <div>
+          <h1>lavender<span>browser</span></h1>
+          <p>Your little corner of the internet</p>
+        </div>
+      </a>
+      <div class="header-status">
+        <span class="status-dot"></span>
+        SIMULATION ACTIVE
+      </div>
+    </header>
+
+    <section class="browser-toolbar">
+      <div class="nav-buttons">
+        <button id="backBtn" class="icon-button" title="Go back" aria-label="Go back">←</button>
+        <button id="forwardBtn" class="icon-button" title="Go forward" aria-label="Go forward">→</button>
+        <button id="homeBtn" class="icon-button home-button" title="Go home" aria-label="Go home">⌂</button>
+      </div>
+
+      <form id="addressForm" class="address-form">
+        <span class="lock-icon">♧</span>
+        <input id="addressInput" type="text" value="home"
+          placeholder="Type a page: home, about, learn, contact..." aria-label="Page address">
+        <button type="submit" class="go-button">Go <span>↗</span></button>
+      </form>
+
+      <div class="toolbar-decoration" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <main class="browser-layout">
+      <section class="main-column">
+        <div class="page-area" id="pageContent">
+          <div class="welcome-icon">✿</div>
+          <p class="eyebrow">A FRESH LITTLE START</p>
+          <h2>Welcome home!</h2>
+          <p>Your browser is ready to explore.</p>
+        </div>
+
+        <div class="quick-access">
+          <div>
+            <p class="eyebrow">QUICK ACCESS</p>
+            <h3>Where to next?</h3>
+          </div>
+          <div class="quick-links">
+            <button class="quick-link" data-page="home"><span>⌂</span> Home</button>
+            <button class="quick-link" data-page="about"><span>♡</span> About</button>
+            <button class="quick-link" data-page="learn"><span>✧</span> Learning Hub</button>
+            <button class="quick-link" data-page="contact"><span>✉</span> Contact</button>
+          </div>
+        </div>
+
+        <div class="learning-note">
+          <span class="note-icon">✦</span>
+          <div>
+            <strong>A little computer science magic</strong>
+            <p>Every navigation tells a story. Watch the stacks change as you browse!</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <section class="panel history-panel">
+          <div class="panel-heading">
+            <div class="panel-icon history-icon">◷</div>
+            <div>
+              <h3>Browsing history</h3>
+              <p>Your recent adventures</p>
+            </div>
+            <span class="count-badge" id="historyCount">0</span>
+          </div>
+          <div id="historyList" class="history-list">
+            <p class="empty-state">Your journey starts here ✨</p>
+          </div>
+          <button id="clearHistoryBtn" class="text-button">Clear history ↗</button>
+        </section>
+
+        <section class="panel stack-panel">
+          <div class="panel-heading">
+            <div class="panel-icon stack-icon">▤</div>
+            <div>
+              <h3>Stack activity</h3>
+              <p>Last in, first out · LIFO</p>
+            </div>
+          </div>
+
+          <div class="stack-section">
+            <div class="stack-title">
+              <span><i class="stack-dot back-dot"></i> Back stack</span>
+              <span class="count-badge" id="backCount">0</span>
+            </div>
+            <div id="backStackList" class="stack-list">
+              <p class="empty-state">No pages yet</p>
+            </div>
+          </div>
+
+          <div class="stack-section">
+            <div class="stack-title">
+              <span><i class="stack-dot forward-dot"></i> Forward stack</span>
+              <span class="count-badge" id="forwardCount">0</span>
+            </div>
+            <div id="forwardStackList" class="stack-list">
+              <p class="empty-state">No pages yet</p>
+            </div>
+          </div>
+
+          <div class="lifo-note">
+            <span>↕</span>
+            <p><strong>Remember:</strong> The last page added is the first page removed.</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <span>✿ Made with curiosity & a little lavender</span>
+      <span>HTML · CSS · JavaScript <b>●</b> Data Structures</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
